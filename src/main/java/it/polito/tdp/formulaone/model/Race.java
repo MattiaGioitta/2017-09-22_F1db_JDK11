@@ -7,14 +7,14 @@ import java.time.Year;
 public class Race {
 	
 	private int raceId ;
-	private Year year ;
+	private int year ;
 	private int round ;
 	private int circuitId ; // refers to {@link Circuit}
 	private String name ;
 	private LocalDate date ;
 	private LocalTime time ;
 	private String url ;
-	public Race(int raceId, Year year, int round, int circuitId, String name, LocalDate date, LocalTime time,
+	public Race(int raceId, int year, int round, int circuitId, String name, LocalDate date, LocalTime time,
 			String url) {
 		super();
 		this.raceId = raceId;
@@ -32,11 +32,15 @@ public class Race {
 	public void setRaceId(int raceId) {
 		this.raceId = raceId;
 	}
-	public Year getYear() {
+	public int getYear() {
 		return year;
 	}
-	public void setYear(Year year) {
+	public void setYear(int year) {
 		this.year = year;
+	}
+	@Override
+	public String toString() {
+		return "Race [raceId=" + raceId + ", name=" + name + "]";
 	}
 	public int getRound() {
 		return round;
